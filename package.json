@@ -1,0 +1,11 @@
+{
+	"name": "admiral",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"setup": "cd admiral-test-be && yarn && cd .. && cd admiral-test-fe && yarn && cd ..",
+		"start-server": "cd admiral-test-be && yarn start",
+		"start-client": "cd admiral-test-fe && yarn start"
+	}
+}
