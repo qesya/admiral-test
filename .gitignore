@@ -1,11 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/admiral-test-fe/node_modules
-/admiral-test-be/node_modules
+/server/node_modules
+/client/node_modules
 
-/admiral-test-be/.env
-/admiral-test-fe/.env
+/server/.env
+/client/.env
 /.pnp
 .pnp.js
 
