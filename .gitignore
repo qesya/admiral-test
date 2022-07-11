@@ -3,6 +3,9 @@
 # dependencies
 /admiral-test-fe/node_modules
 /admiral-test-be/node_modules
+
+/admiral-test-be/.env
+/admiral-test-fe/.env
 /.pnp
 .pnp.js
 

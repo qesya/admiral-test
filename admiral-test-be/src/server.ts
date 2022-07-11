@@ -6,19 +6,23 @@ import { ApolloServer } from 'apollo-server-express';
 import { mergeResolvers, mergeTypeDefs } from '@graphql-tools/merge';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 import { ApolloServerPluginLandingPageGraphQLPlayground } from 'apollo-server-core';
+import 'dotenv/config';
 
 import { defs, resolvers } from './graphql';
 
-const port = 4000;
-const uri = 'mongodb+srv://pasqualepalena:t8zKVagHvJw55xIQ@admiral-test.lx6bdsk.mongodb.net/?retryWrites=true&w=majority';
+const port = process.env.PORT || 8000;
+const uri = process.env.MONGO_URL || '';
 
 const app = express();
 app.use(
 	cors({
 		origin: '*',
 	})
-);
+); 
 const httpServer = http.createServer(app);
+
+console.log(uri);
+console.log(port);
 
 const loadTypeDefs = Object.values(defs).map((x) => x);
 const loadResolvers = Object.values(resolvers).map((x) => x);
