@@ -21,9 +21,6 @@ app.use(
 ); 
 const httpServer = http.createServer(app);
 
-console.log(uri);
-console.log(port);
-
 const loadTypeDefs = Object.values(defs).map((x) => x);
 const loadResolvers = Object.values(resolvers).map((x) => x);
 
